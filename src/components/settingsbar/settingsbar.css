@@ -1,0 +1,49 @@
+.settings-icon:hover {
+  opacity: 0.7;
+}
+
+.settings-menu {
+  position: fixed; /* Usamos fixed para cobrir a tela */
+  top: 0;
+  left: 0;
+  background-color: #181818;
+  width: 300px; /* Largura um pouco maior para o menu */
+  height: 100vh; /* Altura total da tela */
+  border-radius: 0; /* Removemos a borda arredondada para cobrir o canto */
+  padding-top: 60px; /* Espaço para não sobrepor o ícone */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Sombra na lateral */
+  animation: slideInLeft 0.3s ease-in-out;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-menu li {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.settings-menu li:hover {
+  background-color: #282828;
+}
+
+/* Animação de slide-in para o menu aparecer da esquerda */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
